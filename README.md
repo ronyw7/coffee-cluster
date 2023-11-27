@@ -1,4 +1,6 @@
 # coffee-cluster ☕ 💻
+Coffee Blend Clustering using Sentence Transformers & K-Means
+
 ---
 
 ### Hosted at https://coffee-cluster.streamlit.app/
