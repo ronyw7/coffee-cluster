@@ -1,7 +1,7 @@
 # coffee-cluster ☕ 💻
 ---
 
-Hosted at https://coffee-cluster.streamlit.app/
+### Hosted at https://coffee-cluster.streamlit.app/
 
 ---
 
@@ -44,6 +44,11 @@ After applying PCA for dimensionality reduction, we did clustering using the sta
 `random_state=42`.
 
 ### Results
+<img width="617" alt="Screenshot 2023-11-27 at 02 20 54" src="https://github.com/ronyw7/coffee-cluster/assets/78146401/64cf1c35-49d5-409d-ae89-f5d0e23a2c63">
+<img width="617" alt="Screenshot 2023-11-27 at 02 20 54" src="https://github.com/ronyw7/coffee-cluster/assets/78146401/9bb86f7c-ab3e-45d1-a195-fb1b179d504f">
+
+
+
 
 ### Examples
 Cluster 7: sweet, smoky, dark-roasted
