@@ -1,0 +1,27 @@
+name: Traffic to coffee-cluster
+
+on: 
+  schedule:
+    - cron: '0 0 */5 * *'
+  push:
+    branches:
+     - main
+    
+jobs:
+  visit-url:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies (if needed)
+        run: |
+          # Add any necessary commands to install dependencies
+          # Example: pip install -r requirements.txt
+        working-directory: ./  
+
+      - name: Visit URL
+        run: |
+          curl -sSf https://coffee-cluster.streamlit.app/
+        timeout-minutes: 5  
