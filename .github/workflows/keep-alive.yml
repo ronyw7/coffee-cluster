@@ -1,11 +1,12 @@
-name: Traffic to coffee-cluster
+name: Traffic to Coffee-Cluster
 
 on: 
   schedule:
-    - cron: '0 0 */5 * *'
+    # Runs every 12 hours;
+    - cron: '0 */12 * * *' 
   push:
     branches:
-     - main
+      - main
     
 jobs:
   visit-url:
@@ -15,13 +16,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Install dependencies (if needed)
-        run: |
-          # Add any necessary commands to install dependencies
-          # Example: pip install -r requirements.txt
-        working-directory: ./  
-
       - name: Visit URL
         run: |
-          curl -sSf https://coffee-cluster.streamlit.app/
-        timeout-minutes: 5  
+          curl -sSf https://coffee-cluster.streamlit.app/ || echo "Failed to access coffee-cluster.streamlit.app"
+        timeout-minutes: 5
